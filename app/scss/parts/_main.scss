@@ -1,0 +1,25 @@
+.main {
+    &__wrapper {
+        display: flex;
+    }
+    &__title {
+        text-transform: uppercase;
+        &>span {
+            color: #333;
+            font-weight: 700;
+        }
+    }
+    &__button-slider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    &__right {
+        position: relative;
+        width: 65%;
+    }
+    &__left {
+        width: 35%;
+    }
+}

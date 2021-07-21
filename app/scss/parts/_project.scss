@@ -1,0 +1,27 @@
+.project {
+    &__grid {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas:
+            "a a a b b b"
+            "a a a b b b"
+            "c d d d e e"
+            "c d d d e e";
+    }
+}
+
+.grid-1 {
+    grid-area: a;
+}
+.grid-2 {
+    grid-area: b;
+}
+.grid-3 {
+    grid-area: c;
+}
+.grid-4 {
+    grid-area: d;
+}
+.grid-5 {
+    grid-area: e;
+}

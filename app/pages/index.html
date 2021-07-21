@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Project</title>
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+</head>
+
+<body>
+    @@include('parts/_header.html')
+
+    <section class="main">
+        <div class="container main__container">
+            <div class="main__wrapper">
+                <div class="main__left">
+                    <div class="main__title-wrapper">
+                        <h1 class="main__title title">Project <span>Nurtovwn</span></h1>
+                    </div>
+                    <div class="main__button-wrapper button-wrapper">
+                        <div class="button-list">
+                            <button class="button button-hero button-prev"><img src="img/arrow-prev.svg" alt="arrow-prev"></button>
+                            <button class="button button-hero button-next"><img src="img/arrow-next.svg" alt="arrow-next"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__right">
+                    <img src="/img/main-image.jpg" alt="" class="main__image">
+                    <button class="button main__button-slider">Взглянуть <img src="img/arrow-next.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project">
+        <div class="container project__container">
+            <h2 class="project__title title">Наши проекты</h2>
+            <div class="project__grid">
+                <img src="img/our-project-img1.jpg" alt="" class="grid-1">
+                <img src="img/our-project-img2.jpg" alt="" class="grid-2">
+                <img src="img/our-project-img3.jpg" alt="" class="grid-3">
+                <img src="img/our-project-img4.jpg" alt="" class="grid-4">
+                <img src="img/our-project-img5.jpg" alt="" class="grid-5">
+            </div>
+        </div>
+    </section>
+
+    @@include('parts/_footer.html')
+    <script src="/js/main.min.js"></script>
+</body>
+
+</html>
