@@ -1,0 +1,35 @@
+.about {
+    padding: 60px 0;
+    &__container {
+        display: flex;
+        background-color: rgba($color: $gray, $alpha: 0.6);
+    }
+    &__left {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__right {
+        width: 35%;
+    }
+    &__image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        &-group {
+            margin-right: 30px;
+        }
+    }
+    &-grid {
+        &-1 {
+            height: 60%;
+            margin-bottom: 30px;
+        }
+        // &-2 {
+        // }
+        &-3 {
+            height: 75%;
+            margin-top: 30px;
+        }
+    }
+}
