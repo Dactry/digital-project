@@ -43,7 +43,7 @@ img {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -67,7 +67,7 @@ img {
     font-weight: 300;
     font-size: 64px;
     line-height: 1;
-    color: #bdbdbd;
+    color: rgba($color: $dark, $alpha: 0.3);
     text-transform: uppercase;
 }
 
@@ -101,7 +101,9 @@ img {
     border: none;
     background-color: #fff;
     color: #333;
-    padding: 30px 50px;
+    padding: 24px 0;
+    width: 222px;
+    letter-spacing: 0.2em;
     cursor: pointer;
     transition: all 0.5s;
     display: inline-grid;
@@ -109,6 +111,7 @@ img {
     justify-content: center;
     align-items: center;
     grid-gap: 15px;
+    text-transform: uppercase;
 
     &-hero {
         background: #ffffff;
