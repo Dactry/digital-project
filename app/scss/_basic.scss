@@ -36,11 +36,34 @@ a {
     text-decoration: none;
 }
 
+ol {
+    counter-reset: myCounter;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
 img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
 }
+
+input, textarea {
+    width: 100%;
+    font-family: "TT Hoves", sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: 16px;
+    color: $dark;
+    padding: 14px 21px;
+    background-color: $gray;
+    border: none;
+    max-width: 100%;
+    min-width: 100%;
+  }
 
 .container {
     max-width: 1200px;
@@ -60,6 +83,10 @@ img {
     @media (max-width: 576px) {
         max-width: 320px;
     }
+}
+
+.main-bottom {
+    margin-bottom: 120px;
 }
 
 .title {
@@ -118,7 +145,7 @@ img {
         padding: 22px 18px;
         transition: all 0.3s ease-in-out;
         &:hover {
-            background: #F9F9F9;
+            background: #f9f9f9;
             transform: scale(0.9);
         }
     }

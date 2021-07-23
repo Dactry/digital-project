@@ -1,0 +1,33 @@
+.contact {
+    &__title {
+        margin-bottom: 22px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form {
+        width: 34%;
+    }
+    &__img {
+        max-width: 66%;
+        object-fit: cover;
+    }
+}
+
+.form {
+    width: 34%;
+    margin-right: 30px;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        & > ::placeholder {
+            font-family: "TT Hoves", sans-serif;
+            font-weight: 400;
+            line-height: 1.1;
+            font-size: 14px;
+            color: #8d8d8d;
+        }
+    }
+}

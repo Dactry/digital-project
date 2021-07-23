@@ -1,0 +1,36 @@
+.tasks {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    &__item {
+        position: relative;
+        width: 50%;
+        min-height: 144px;
+        padding-left: 136px;
+        margin-bottom: 60px;
+        &:before {
+            position: absolute;
+            left: 0;
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            color: rgba($color: $gray, $alpha: 0.8);
+            font-size: 200px;
+            line-height: 0.7;
+            font-weight: 900;
+            display: block;
+            text-align: center;
+        }
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__text {
+        font-size: 22px;
+        color: $dark;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+}
