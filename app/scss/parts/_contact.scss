@@ -10,8 +10,11 @@
         width: 34%;
     }
     &__img {
-        max-width: 66%;
         object-fit: cover;
+    }
+    &__right {
+        display: flex;
+        max-height: 369px;
     }
 }
 
@@ -28,6 +31,29 @@
             line-height: 1.1;
             font-size: 14px;
             color: #8d8d8d;
+        }
+        & > textarea {
+            min-height: 147px;
+        }
+        &-style {
+            font-family: "TT Hoves", sans-serif;
+            font-weight: 600;
+            line-height: 1.1;
+            font-size: 16px;
+            color: $dark;
+            padding: 14px 21px;
+            background-color: $gray;
+            border: none;
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+    &-checkbox {
+        display: flex;
+        align-items: center;
+        & > label {
+            display: flex;
+            align-items: center;
         }
     }
 }

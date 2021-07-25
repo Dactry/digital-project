@@ -50,20 +50,21 @@ img {
     max-width: 100%;
     margin: 0 auto;
 }
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 14px;
+    background: url(/img/Path.svg) center left no-repeat;
+    cursor: pointer;
+}
 
-input, textarea {
-    width: 100%;
-    font-family: "TT Hoves", sans-serif;
-    font-weight: 600;
-    line-height: 1.1;
-    font-size: 16px;
-    color: $dark;
-    padding: 14px 21px;
-    background-color: $gray;
-    border: none;
-    max-width: 100%;
-    min-width: 100%;
-  }
+input[type="checkbox"]:checked + label span {
+    background: none;
+}
 
 .container {
     max-width: 1200px;
@@ -165,4 +166,9 @@ input, textarea {
     //     background-color: #8a8abe;
     //     transform: scale(1.05);
     // }
+}
+
+.pages-title {
+    margin: 60px 0;
+    max-width: 35%;
 }

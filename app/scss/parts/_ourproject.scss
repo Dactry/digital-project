@@ -1,0 +1,23 @@
+.our-project {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        max-width: 670px;
+    }
+    &__right {
+        max-width: 500px;
+        background-color: $gray;
+        padding: 30px;
+    }
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+    &__text {
+        margin-bottom: 64px;
+    }
+}
