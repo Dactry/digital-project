@@ -13,7 +13,7 @@
 //     const elementPosition = scrollTarget.getBoundingClientRect().top;
 //     const offsetPosition = elementPosition - topOffset;
 
-    
+
 //     navListLeft.classList.toggle('mobile__nav-list-active');
 //     mobileBtn.classList.toggle('burger-close');
 
@@ -45,3 +45,20 @@
 //   this.classList.toggle('burger-close');
 //   navListLeft.classList.toggle('mobile__nav-list-active');
 // }
+
+
+const modal = document.querySelector('.popup');
+const modalBtn = document.querySelector('.open-popup-modal');
+const modalClose = document.querySelector('.popup__close');
+const modalClose1 = document.querySelector('.popup__button');
+
+modalBtn.onclick = function () {
+    modal.classList.add('popup__active')
+};
+
+modalClose.onclick = function () {
+    modal.classList.remove('popup__active');
+}
+modalClose1.onclick = function () {
+    modal.classList.remove('popup__active');
+}
