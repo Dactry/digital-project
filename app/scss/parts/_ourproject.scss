@@ -2,14 +2,18 @@
     &__item {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 60px;
     }
-    &__left {
-        max-width: 670px;
-    }
+    // &__left {
+    //     height: auto;
+    // }
     &__right {
         max-width: 500px;
         background-color: $gray;
         padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &__title {
         font-size: 40px;
@@ -19,5 +23,10 @@
     }
     &__text {
         margin-bottom: 64px;
+    }
+    &__img {
+        height: 100%;
+        object-fit: cover;
+        width: fit-content;
     }
 }

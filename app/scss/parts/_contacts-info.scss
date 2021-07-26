@@ -1,0 +1,35 @@
+.contacts-info {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        // position: relative;
+    }
+    &__left {
+        min-width: 481px;
+        margin-right: 34px;
+    }
+    // &__right {
+    //     position: absolute;
+    //     right: -135px;
+    //     top: 0;
+    // }
+    &__text {
+        &>span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    &__tel {
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark;
+    }
+    // &__button {
+        
+    // }
+}

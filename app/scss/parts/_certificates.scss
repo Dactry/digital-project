@@ -1,0 +1,16 @@
+.certificates {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    &__item {
+        max-width: 33.333%;
+    }
+    &__button-list {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
