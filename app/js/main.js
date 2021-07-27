@@ -47,18 +47,51 @@
 // }
 
 
-const modal = document.querySelector('.popup');
-const modalBtn = document.querySelector('.open-popup-modal');
-const modalClose = document.querySelector('.popup__close');
+const form = document.querySelector('.contacts-info__form');
+const formBtn = document.querySelector('.contacts-info__button');
+const formClose = document.querySelector('.contacts-info__form-close');
+
+formBtn.onclick = function () {
+    form.classList.add('-active')
+}
+formClose.onclick = function () {
+    form.classList.remove('-active');
+}
+
+const modal = document.querySelector('.popup')
+const modalBtn = document.querySelector('.open-popup')
+const modalClose = document.querySelector('.popup__close')
 const modalClose1 = document.querySelector('.popup__button');
 
 modalBtn.onclick = function () {
-    modal.classList.add('popup__active')
+    modal.classList.add('popup-active');
+    form.classList.remove('-active');
 };
 
 modalClose.onclick = function () {
-    modal.classList.remove('popup__active');
-}
+    modal.classList.remove('popup-active');
+};
+
 modalClose1.onclick = function () {
-    modal.classList.remove('popup__active');
-}
+    modal.classList.remove('popup-active');
+};
+
+
+modal.onclick = function(e){
+    if ( event.target.className != 'popup__content' ) {
+        modal.classList.remove('popup-active');
+    };
+};
+
+// const form = document.querySelector("form");
+// form.addEventListener("submit", async event => {
+//     event.preventDefault();
+//     const formData = new FormData(form)
+//     const response = await fetch(form.action, {
+//         method: 'POST',
+//         body: formData
+//     }
+//   if (response.ok) {
+//         location.replace('yourredirecturl')
+//     }
+// });

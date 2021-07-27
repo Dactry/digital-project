@@ -15,13 +15,22 @@
                     </li>
                     <li class="contacts-info__item">Galym.sultanov@mail.ru</li>
                     <li class="contacts-info__item">
-                        <button id="open-popup-modal" class="open-popup-modal button project__button contacts-info__button">обратная связь</button>
-                        
+                        <button class="button project__button contacts-info__button">обратная
+                            связь</button>
+
                     </li>
                 </ul>
             </div>
             <div class="contacts-info__right">
                 <img src="img/map.jpg" alt="map" class="contacts-info__map image-fit">
+            </div>
+            <div class="contacts-info__form">
+                <div class="contacts-info__form-wrapper">
+                    <p class="contacts-info__form-text">Задать вопрос</p>
+                    <button class="contacts-info__form-close"><img src="/img/btn-close.svg" alt="close"></button>
+                    @@include('parts/_form.html')
+
+                </div>
             </div>
             @@include('parts/_popup.html')
         </div>
