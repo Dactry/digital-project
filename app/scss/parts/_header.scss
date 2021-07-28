@@ -11,6 +11,9 @@
         margin: inherit;
         &-wrapper {
             width: 35%;
+            a {
+                display: inline-block;
+            }
         }
     }
     &__list {
@@ -56,6 +59,10 @@
         &:hover::after {
             opacity: 1;
 
+        }
+        &.current-page::after,
+        &.current-page::before {
+            opacity: 1;
         }
     }
     // &__item {

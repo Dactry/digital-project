@@ -52,15 +52,15 @@ function buildStyles() {
 };
 
 function scripts() {
-    return src('app/js/main.js')
-        .pipe(concat('main.min.js'))
+    return src('app/js/*.js')
+        // .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('dist/js'))
 }
 
 function watching() {
     watch(['app/scss/**/*.scss'], buildStyles);
-    watch(['app/js/main.js', '!app/js/main.min.js'], scripts);
+    watch(['app/js/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/pages/**/*.html'], buildhtml);
     watch("app/img/", imageMin);
 }
