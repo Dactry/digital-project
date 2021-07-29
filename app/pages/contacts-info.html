@@ -1,4 +1,10 @@
-@@include('parts/_header.html')
+@@include('parts/_header.html', {
+    main: '',
+    gallery: '',
+    projects: '',
+    sertif: '',
+    contacts: 'current-page'
+    })
 <section class="contacts-info main-bottom">
     <div class="container contacts-info__container">
         <div class="contacts-info__wrapper">
@@ -25,6 +31,7 @@
                 <img src="img/map.jpg" alt="map" class="contacts-info__map image-fit">
             </div>
             <div class="contacts-info__form">
+                <div class="contacts-info__form-overlay"></div>
                 <div class="contacts-info__form-wrapper">
                     <p class="contacts-info__form-text">Задать вопрос</p>
                     <button class="contacts-info__form-close"><img src="/img/btn-close.svg" alt="close"></button>
@@ -32,6 +39,7 @@
 
                 </div>
             </div>
+            
             @@include('parts/_popup.html')
         </div>
     </div>

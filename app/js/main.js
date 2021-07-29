@@ -47,41 +47,41 @@
 // }
 
 
-const form = document.querySelector('.contacts-info__form');
-const formBtn = document.querySelector('.contacts-info__button');
-const formClose = document.querySelector('.contacts-info__form-close');
+// const form = document.querySelector('.contacts-info__form');
+// const formBtn = document.querySelector('.contacts-info__button');
+// const formClose = document.querySelector('.contacts-info__form-close');
 
-formBtn.onclick = function () {
-    form.classList.add('-active')
-}
-formClose.onclick = function () {
-    form.classList.remove('-active');
-}
+// formBtn.onclick = function () {
+//     form.classList.add('-active')
+// }
+// formClose.onclick = function () {
+//     form.classList.remove('-active');
+// }
 
-const modal = document.querySelector('.popup')
-const modalBtn = document.querySelector('.open-popup')
-const modalClose = document.querySelector('.popup__close')
-const modalClose1 = document.querySelector('.popup__button');
+// const modal = document.querySelector('.popup')
+// const modalBtn = document.querySelector('.open-popup')
+// const modalClose = document.querySelector('.popup__close')
+// const modalClose1 = document.querySelector('.popup__button');
 
-modalBtn.onclick = function () {
-    modal.classList.add('popup-active');
-    form.classList.remove('-active');
-};
+// modalBtn.onclick = function () {
+//     modal.classList.add('popup-active');
+//     form.classList.remove('-active');
+// };
 
-modalClose.onclick = function () {
-    modal.classList.remove('popup-active');
-};
+// modalClose.onclick = function () {
+//     modal.classList.remove('popup-active');
+// };
 
-modalClose1.onclick = function () {
-    modal.classList.remove('popup-active');
-};
+// modalClose1.onclick = function () {
+//     modal.classList.remove('popup-active');
+// };
 
 
-modal.onclick = function(e){
-    if ( event.target.className != 'popup__content' ) {
-        modal.classList.remove('popup-active');
-    };
-};
+// modal.onclick = function(e){
+//     if ( event.target.className != 'popup__content' ) {
+//         modal.classList.remove('popup-active');
+//     };
+// };
 
 // const form = document.querySelector("form");
 // form.addEventListener("submit", async event => {
