@@ -115,6 +115,10 @@ html, body {
     font-size: 64px;
     line-height: 1;
     color: rgba($color: $dark, $alpha: 0.3);
+    @media (max-width: 1200px) {
+        font-size: 40px;    
+    }
+    
 }
 
 .text {

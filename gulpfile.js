@@ -66,7 +66,7 @@ function watching() {
 }
 
 function imageMin() {
-    return src('app/img/*.{jpg,png,svg,webp}')
+    return src('app/img/*.{jpg,png,svg,webp,jpeg}')
         .pipe(cache(imagemin()))
         .pipe(dest("dist/img"));
 };

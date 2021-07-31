@@ -3,11 +3,14 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
+        min-height: 435px;
     }
-    // &__left {
-    //     height: auto;
-    // }
+    &__left {
+        width: 100%;
+        max-width: 670px;
+    }
     &__right {
+        width: 100%;
         max-width: 500px;
         background-color: $gray;
         padding: 30px;
@@ -30,3 +33,4 @@
         width: fit-content;
     }
 }
+

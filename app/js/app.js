@@ -20,6 +20,17 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  });
+  $('.main__gallary').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    fade: true,
   });
 
   $('.gallery__list').slick({
@@ -29,8 +40,33 @@ $(document).ready(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 5,
-    slidesToScroll: 5
+    slidesToScroll: 5,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
   });
+  
+  $('.our-project__list').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  });
+  
+  $('.our-project__list').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  });
+  
 
 
 
@@ -47,9 +83,9 @@ $(document).ready(function () {
     $(activeForm);
   });
 
-  const blockScroll = function(){
+  const blockScroll = function () {
     $("body").addClass("fixed");
-  }; 
+  };
 
   const closePopup = function () {
     $('.popup').removeClass('popup-active')
@@ -66,5 +102,17 @@ $(document).ready(function () {
   $('.form').submit(function (event) {
     event.preventDefault();
   });
+
+
+  $('.image-link').magnificPopup({ type: 'image' });
+  $('.parent-container').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    gallery: { enabled: true }
+    // other options
+  });
+
+  const nextArrow = $('#my-arrow-next');
+  const prevArrow = $('#my-arrow-prev');
 
 });
