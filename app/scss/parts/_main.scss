@@ -5,12 +5,21 @@
     &__image {
         object-fit: cover;
         height: 829px;
+        @media (max-width: 992px) {
+            height: 600px;
+        }   
     }
     &__wrapper {
         display: flex;
+        @media (max-width: 992px) {
+            flex-direction: column;   
+        }
     }
     &__title {
         text-transform: uppercase;
+        @media (max-width: 992px) {
+            margin-bottom: 30px;   
+        }
         &>span {
             color: $dark;
             font-weight: 700;
@@ -30,12 +39,27 @@
         }
         &-wrapper {
             padding-top: 90px;
+            @media (max-width: 992px) {
+                display: none; 
+            }
+            &-mob {
+                @media (min-width: 993px) {
+                 display: none;   
+                }
+                @media (max-width: 992px) {
+                 display: block;   
+                }
+            }
         }
     }
     &__right {
         position: relative;
         width: 65%;
         max-height: 829px;
+        @media (max-width: 992px) {
+            width: 100%;
+            margin-bottom: 30px;   
+        }
     }
     &__left {
         width: 35%;
