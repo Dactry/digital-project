@@ -20,7 +20,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    
+
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
@@ -44,7 +44,7 @@ $(document).ready(function () {
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
-  
+
   $('.our-project__list').slick({
     dots: false,
     arrows: true,
@@ -55,7 +55,7 @@ $(document).ready(function () {
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
-  
+
   $('.our-project__list').slick({
     dots: false,
     arrows: true,
@@ -66,7 +66,7 @@ $(document).ready(function () {
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
-  
+
 
 
 

@@ -43,7 +43,7 @@
         &::after, 
         &::before {
             content: '';
-            width: 100%;
+            width: 0%;
             height: 1px;
             transition: all 0.3s ease;
             background-color: $dark;
@@ -58,17 +58,19 @@
         &::before {
             transform: translateY(2px);
             bottom: 0;
-            left: 0;
+            right: 0;
         }
 
         &:hover::before,
         &:hover::after {
             opacity: 1;
+            width: 100%;
 
         }
         &.current-page::after,
         &.current-page::before {
             opacity: 1;
+            width: 100%;
         }
     }
     // &__item {

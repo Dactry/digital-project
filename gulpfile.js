@@ -38,6 +38,11 @@ function buildhtml() {
         .pipe(dest('dist/'))
 }
 
+function destCss() {
+    return src('app/scss/*.css')
+        .pipe(dest('dist/css/'))
+}
+
 function buildStyles() {
     return src('app/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -51,6 +56,11 @@ function buildStyles() {
         .pipe(dest('dist/css/'))
 };
 
+function destFonts() {
+    return src('app/fonts/*')
+        .pipe(dest('dist/fonts/'))
+};
+
 function scripts() {
     return src('app/js/*.js')
         // .pipe(concat('main.min.js'))
@@ -60,9 +70,12 @@ function scripts() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], buildStyles);
+    watch(['app/scss/*.css'], destCss);
+    watch(['app/fonts/*'], destFonts);
     watch(['app/js/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/pages/**/*.html'], buildhtml);
     watch("app/img/", imageMin);
+
 }
 
 function imageMin() {
@@ -75,9 +88,11 @@ function imageMin() {
 
 exports.buildhtml = buildhtml
 exports.buildStyles = buildStyles;
+exports.destCss = destCss;
 exports.watching = watching;
 exports.browsersync = browsersync;
-exports.imageMin = imageMin
-exports.scripts = scripts
+exports.imageMin = imageMin;
+exports.scripts = scripts;
 
-exports.start = parallel(buildStyles, watching, browsersync, scripts, imageMin, buildhtml)
+
+exports.start = parallel(buildStyles, watching, browsersync, scripts, destFonts, imageMin, destCss, buildhtml)
