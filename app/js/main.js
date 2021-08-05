@@ -95,3 +95,12 @@
 //         location.replace('yourredirecturl')
 //     }
 // });
+
+(function(){
+    var burger = document.querySelector('.hamburglar'),
+        header = document.querySelector('.header-menu');
+    
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened');
+    }
+}());

@@ -7,6 +7,12 @@
         grid-template-areas:
             "a a a a b b b"
             "c d d d d e e";
+            @media (max-width: 1200px) {
+                grid-template-areas: 
+                "a a a b b b"
+                "c c d d e e";
+                grid-gap: 15px;
+            }  
     }
     &-image {
         object-fit: cover;
@@ -45,6 +51,9 @@
             line-height: 1;
             text-transform: uppercase;
             width: min-content;
+            @media (max-width: 1200px) {
+                font-size: 34px;
+            }   
         }
     }
     &__link {
