@@ -17,9 +17,14 @@
         @media (max-width: 992px) {
             width: 100%;   
         }
+        @media (max-width: 768px) {
+            padding-left: 0;   
+            margin-bottom: 30px;
+        }
         &:before {
             position: absolute;
             left: 0;
+            z-index: -1;
             counter-increment: myCounter;
             content: counter(myCounter);
             color: rgba($color: $gray, $alpha: 0.8);
@@ -38,5 +43,8 @@
         color: $dark;
         line-height: 1.6;
         font-weight: 300;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }   
     }
 }
