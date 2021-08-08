@@ -5,6 +5,9 @@
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            margin-bottom: 30px;   
+        }
     }
     &__item {
         max-width: 33.333%;

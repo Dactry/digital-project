@@ -3,10 +3,17 @@
         display: flex;
         justify-content: space-between;
         // position: relative;
+        @media (max-width: 768px) {
+            display: block;   
+        }
     }
     &__left {
-        min-width: 481px;
+        max-width: 481px;
         margin-right: 34px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+            min-width: 100%;
+        }   
     }
     &__text {
         & > span {

@@ -366,7 +366,7 @@ $menuItems: 7;
 .header-menu {
     position: absolute;
     display: block;
-    top: auto;
+    top: 68px;
     left: 0;
     width: 100%;
     visibility: hidden;
@@ -381,7 +381,7 @@ ul.menu {
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: calc(100vh - 68px);
     & li.menu-item {
         border-bottom: 1px solid #333;
@@ -403,6 +403,7 @@ ul.menu {
             font-weight: 100;
             text-decoration: none;
             font-size: 22px;
+            
             line-height: 1.5;
             font-weight: 200;
             width: 100%;

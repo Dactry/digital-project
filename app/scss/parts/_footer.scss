@@ -5,8 +5,17 @@
         display: flex;
         justify-content: space-between;
         padding: 60px 0;
+        @media (max-width: 768px) {
+            text-align: center;   
+            flex-direction: column;
+            padding: 30px 0;
+        }
         &-item {
             max-width: 25%;
+            @media (max-width: 768px) {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }   
         }
         &-link {
             color: #fff;
@@ -18,22 +27,38 @@
             &:hover {
                 transform: scale(1.05);
             }
+            @media (max-width: 768px) {
+                font-weight: 300;   
+            }
         }
         &-title {
             color: #fff;
             margin-bottom: 25px;
             font-size: 16px;
+            @media (max-width: 768px) {
+                font-size: 22px;   
+            }
         }
     }
     &__info {
+        &-list {
+            min-height: 184px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: 768px) {
+                display: block;   
+                min-height: 100%;
+            }
+        }
         &-item {
             transition: all 0.2s ease;
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
             &:hover {
                 transform: scale(1.1);
             }
+            @media (max-width: 768px) {
+                margin-bottom: 5px;
+            }   
         }
     }
     &__sotial {
@@ -47,25 +72,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width: 768px) {
+                justify-content: space-around;   
+            }
         }
         &-img {
             padding-right: 13px;
+            @media (max-width: 768px) {
+             padding: 0;   
+            }
             & > img {
                 max-width: inherit;
             }
         }
     }
     &__contacts {
-        &-list {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding-bottom: 50px;
-        }
         &-item {
             display: flex;
             align-items: center;
+            @media (max-width: 768px) {
+                display: block;   
+                margin-bottom: 10px;
+            }
         }
     }
     &__copyright {

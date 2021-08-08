@@ -2,6 +2,9 @@
     &__list {
         position: relative;
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            margin: 0;
+        }       
 
         &::before {
             content: "";
@@ -11,6 +14,9 @@
             background-color: $gray;
             top: -30px;
             left: 0;
+            @media (max-width: 992px) {
+                display: none;   
+            }
         }
     }
 

@@ -20,6 +20,7 @@
         @media (max-width: 768px) {
             padding-left: 0;   
             margin-bottom: 30px;
+            min-height: 100px;
         }
         &:before {
             position: absolute;
@@ -33,10 +34,16 @@
             font-weight: 900;
             display: block;
             text-align: center;
+            @media (max-width: 768px) {
+                font-size: 135px;   
+            }
         }
     }
     &__title {
         margin-bottom: 60px;
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }   
     }
     &__text {
         font-size: 22px;

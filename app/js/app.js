@@ -1,20 +1,3 @@
-// $('.nav__item') 
-
-// $('.nav__logo-wrapper').addClass('is-active')
-
-// $('.nav__logo-wrapper').removeClass('is-active')
-// $('.nav__logo-wrapper').toggleClass('is-active')
-
-// $('.nav__item').children('a').addClass('.is-active')
-
-// $('.main__button-slider').on('click', function() {
-//     $(this).toggleClass('is-active');
-// })
-
-// $('.nav__item').each(function () {
-//     $(this).addClass('-active')
-// })
-
 $(document).ready(function () {
   $('.certificates__list').slick({
     infinite: true,
@@ -23,6 +6,13 @@ $(document).ready(function () {
 
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
   });
   $('.main__gallary').slick({
     infinite: true,
@@ -30,30 +20,60 @@ $(document).ready(function () {
     slidesToScroll: 1,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
+    autoplay: true,
+    autoplaySpeed: 3000,
     fade: true,
   });
+
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 769) {
+      $('.project__preview').slick('unslick');
+    }
+    else {
+      $('.project__preview').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        autoplay: true,
+        centerPadding: '50px',
+        autoplaySpeed: 3000,
+        prevArrow: $('.prev1'),
+        nextArrow: $('.next1'),
+      });
+    }
+  });
+
+
 
   $('.gallery__list').slick({
     rows: 2,
     dots: false,
     arrows: true,
-    infinite: true,
+    // infinite: true,
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 5,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
-  });
-
-  $('.our-project__list').slick({
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          rows: 1,
+          centerMode: true,
+          centerPadding: '30px',
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   $('.our-project__list').slick({
@@ -112,27 +132,24 @@ $(document).ready(function () {
     // other options
   });
 
-  const nextArrow = $('#my-arrow-next');
-  const prevArrow = $('#my-arrow-prev');
+  var trigger = $('#hamburger'),
+    isClosed = false;
 
-    var trigger = $('#hamburger'),
-        isClosed = false;
+  trigger.click(function () {
+    burgerTime();
+  });
 
-    trigger.click(function () {
-      burgerTime();
-    });
-
-    function burgerTime() {
-      if (isClosed == true) {
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-      } else {
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
+  function burgerTime() {
+    if (isClosed == true) {
+      trigger.removeClass('is-open');
+      trigger.addClass('is-closed');
+      isClosed = false;
+    } else {
+      trigger.removeClass('is-closed');
+      trigger.addClass('is-open');
+      isClosed = true;
     }
+  }
 
 
 });
