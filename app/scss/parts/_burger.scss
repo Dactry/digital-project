@@ -386,7 +386,7 @@ ul.menu {
     & li.menu-item {
         border-bottom: 1px solid #333;
         margin-top: 5px;
-        transform: scale(1.15) translateX(-100px);
+        transform: scale(1.15) translateX(0);
         padding-left: 10px;
         opacity: 0;
         transition: transform 0.5s $cubic, opacity 0.6s $cubic;
@@ -394,7 +394,7 @@ ul.menu {
             &:nth-child(#{$i}) {
                 transition-delay: #{0.56 - ($i * 0.07)}s;
             }
-        }
+        };
         & a {
             display: block;
             position: relative;
